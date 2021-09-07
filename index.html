@@ -1,30 +1,47 @@
+
+<script>
+function ValidateLoginForm()
+{
+    var username = document.form1.username;
+    var password = document.form1.password;
+
+
+      if (username.value == "")
+    {
+        alert("Your username wasn't recognised.");
+        username.focus();
+        return false;
+    }
+
+      if (password.value == "")
+    {
+        alert("Please enter a password.");
+        password.focus();
+        return false;
+    }
+     
+    else{
+    return true;
+    }
+}
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="van.css">
+<link rel="stylesheet" href="van.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Van</title>
 </head>
-<body style="background-color:aliceblue;">
-        <h1>Nnamdi Azikwe University Awka</h1><br>
-    <table style="border: 1px soild black;width:100%;
-    border-collapse:collapse;"class="table" style="">
-        <th> Name</th>
-        <th>programme</th>
-        <th>Course</th>
-        <th>level</th>
-        <th>Faculty</th>
-        <th>Gender</th>
-        <tr>
-            <td>NNAEMEKA EUSEBIUS CHIBUIKE</td>
-            <td>postgraguaduate(MSc)</td>
-            <td>computer science</td>
-            <td>100</td>
-            <td>physical science</td>
-            <td>Male</td>
-        </tr>
-    </table>
+<body>
+    <h1>    NNAMDI AZIKWE UNIVERSITY AWKA</h1>
+    <form name="form1" method="post"action="index.html" class='form'>
+        <input type="text"style="width:40%;"id="username" placeholder="username"name="username" ><br></br>
+        <input type="password" style="width:40%;"name="password"placeholder="password"id="password" pattern=".{5,}" title="Minimum length of 5 letters or numbers."  required><br></br>
+        <input type="submit"style="width:20%;"name="submit" value="submit" type="submit"class="button"></a>
+        <p>*Password must consist of numbers and letters.. 5 Characters minimum.</p>
+    </form>
 </body>
 </html>
