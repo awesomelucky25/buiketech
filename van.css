@@ -1,0 +1,22 @@
+body{
+    border: 2px soild black;
+    text-align: center;
+}
+input{
+width: 30%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border-radius: 4px;
+}
+
+.form {
+    margin: auto;
+    border: 2px solid black !important;
+    width: 500px;
+    align-self: center;
+}
+@media(max-width: 768px){
+    form:100%;
+
+}
